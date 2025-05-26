@@ -30,6 +30,7 @@ import {
 import Image from "next/image"
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion"
 import { useState, useRef, useEffect } from "react"
+import Link from "next/link"
 
 // Hook personnalisé pour les dimensions de fenêtre
 const useWindowDimensions = () => {
@@ -245,7 +246,7 @@ const TestimonialSection = () => {
     name: "Mohamed K.",
     result: "850K F CFA en 45 jours",
     text: "Au début j'étais sceptique, mais la méthode d'Adriel m'a permis de générer mes premiers 850K F CFA en seulement 45 jours ! La formation est claire et le support est exceptionnel.",
-    thumbnail: "/hero_photo.webp",
+    thumbnail: "/exemple8.webp",
     videoUrl: "/exemple_video1.mov",
     isLocalVideo: true,
     avatar: "/placeholder.svg?height=60&width=60",
@@ -655,7 +656,7 @@ export default function LandingPage() {
                     whileInView={{ scale: [1, 1.02, 1] }}
                     transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
                   >
-                    <strong className="text-white">
+                    <strong className="text-yellow-400">
                       {" "}
                       Vous recherchez un moyen d'avoir des revenus supplémentaires chaque mois ?
                     </strong>
@@ -694,29 +695,41 @@ export default function LandingPage() {
                 className="space-y-4"
               >
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <MorphingButton
-                    size="lg"
-                    className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-6 sm:px-10 py-4 sm:py-6 text-base sm:text-xl font-bold group shadow-2xl w-full sm:w-auto"
-                  >
-                    <span className="flex items-center justify-center">
-                      <span className="mr-2 sm:mr-3">SOUSCRIRE</span>
-                      <motion.div
-                        animate={{ x: [0, 5, 0] }}
-                        transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY }}
-                      >
-                        <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6" />
-                      </motion.div>
-                    </span>
-                  </MorphingButton>
+                 <Button
+  size="lg"
+  className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-6 sm:px-10 py-4 sm:py-6 text-base sm:text-xl font-bold group shadow-2xl"
+  onClick={() => {
+    const pricingSection = document.querySelector('#pricing')
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+  }}
+>
+  <span className="flex items-center justify-center">
+    <span className="mr-2 sm:mr-3">SOUSCRIRE</span>
+    <motion.div
+      animate={{ x: [0, 5, 0] }}
+      transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY }}
+    >
+      <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6" />
+    </motion.div>
+  </span>
+</Button>
 
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Button
-                      variant="outline"
-                      size="lg"
-                      className="border-2 border-yellow-400 text-yellow-400 bg-yellow-400 text-blue-900 px-6 sm:px-10 py-4 sm:py-6 text-base sm:text-lg font-semibold w-full sm:w-auto"
-                    >
-                      DÉCOUVRIR LE PROGRAMME
-                    </Button>
+                   <Button
+  variant="outline"
+  size="lg"
+  className="border-2 border-yellow-400 text-yellow-400 bg-yellow-400 text-blue-900 px-6 sm:px-10 py-4 sm:py-6 text-base sm:text-lg font-semibold w-full sm:w-auto"
+  asChild
+>
+  <Link href="https://www.pay.moneyfusion.net/la-formation-sur-les-produits-digitaux-_1748206593770/">
+    DÉCOUVRIR LE PROGRAMME
+  </Link>
+</Button>
                   </motion.div>
                 </div>
               </motion.div>
@@ -970,9 +983,21 @@ export default function LandingPage() {
               <strong className="text-yellow-400">Bonne nouvelle :</strong> Il existe une solution qui fonctionne
               vraiment !
             </motion.p>
-            <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg font-bold">
-              DÉCOUVRIR LA SOLUTION
-            </Button>
+<Button 
+  size="lg" 
+  className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg font-bold"
+  onClick={() => {
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }}
+>
+  DÉCOUVRIR LA SOLUTION
+</Button>
           </motion.div>
         </div>
       </section>
@@ -1057,7 +1082,7 @@ export default function LandingPage() {
                 title: "250+ Produits Digitaux Prêts",
                 count: "250+",
                 description: "Formations, cours, contenus éducatifs... Tout est prêt à vendre !",
-                image: "/placeholder.svg?height=200&width=300",
+                image: "/produit.jpeg?height=200&width=300",
                 value: "Valeur : 50 000 F CFA",
                 gradient: "from-purple-500 to-pink-500",
                 icon: <Gift className="h-6 w-6" />,
@@ -1066,7 +1091,7 @@ export default function LandingPage() {
                 title: "115 Tunnels de Vente Optimisés",
                 count: "115",
                 description: "Des pages qui convertissent à plus de 15% (3x la moyenne du marché)",
-                image: "/placeholder.svg?height=200&width=300",
+                image: "/tunnel.jpeg?height=200&width=300",
                 value: "Valeur : 75 000 F CFA",
                 gradient: "from-blue-500 to-cyan-500",
                 icon: <TrendingUp className="h-6 w-6" />,
@@ -1075,7 +1100,7 @@ export default function LandingPage() {
                 title: "159 Prompts IA Puissants",
                 count: "159",
                 description: "Automatisez votre marketing et votre service client avec l'IA",
-                image: "/placeholder.svg?height=200&width=300",
+                image: "/prompt.jpeg",
                 value: "Valeur : 25 000 F CFA",
                 gradient: "from-green-500 to-emerald-500",
                 icon: <Zap className="h-6 w-6" />,
@@ -1084,7 +1109,7 @@ export default function LandingPage() {
                 title: "Formation Complète",
                 count: "∞",
                 description: "Apprenez étape par étape comment tout mettre en place",
-                image: "/placeholder.svg?height=200&width=300",
+                image: "/formation.jpeg?height=200&width=300",
                 value: "Valeur : 100 000 F CFA",
                 gradient: "from-orange-500 to-red-500",
                 icon: <Award className="h-6 w-6" />,
@@ -1093,7 +1118,7 @@ export default function LandingPage() {
                 title: "Coaching Personnalisé",
                 count: "1:1",
                 description: "Je vous accompagne personnellement vers le succès",
-                image: "/placeholder.svg?height=200&width=300",
+                image: "/coaching.jpg?height=200&width=300",
                 value: "Valeur : 150 000 F CFA",
                 gradient: "from-indigo-500 to-purple-500",
                 icon: <Users className="h-6 w-6" />,
@@ -1102,7 +1127,7 @@ export default function LandingPage() {
                 title: "Droits de Revente 100%",
                 count: "100%",
                 description: "Revendez tout et gardez 100% des bénéfices à vie !",
-                image: "/placeholder.svg?height=200&width=300",
+                image: "/revente.webp?height=200&width=300",
                 value: "Valeur : INESTIMABLE",
                 gradient: "from-yellow-500 to-orange-500",
                 icon: <DollarSign className="h-6 w-6" />,
@@ -1141,11 +1166,7 @@ export default function LandingPage() {
                             className="w-full h-48 object-cover"
                           />
                         </motion.div>
-                        <motion.div
-                          className={`absolute inset-0 bg-gradient-to-br ${product.gradient} opacity-80`}
-                          whileHover={{ opacity: 0.9 }}
-                          transition={{ duration: 0.3 }}
-                        />
+                      
 
                         {/* Icône flottante */}
                         <motion.div
@@ -1261,12 +1282,23 @@ export default function LandingPage() {
               >
                 <strong>Valable uniquement</strong> pour les 20 premiers inscrits !
               </motion.p>
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-12 py-6 text-xl font-bold cursor-pointer"
-              >
-                JE SOUSCRIS
-              </Button>
+              <MorphingButton 
+  className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-12 py-6 text-xl font-bold cursor-pointer"
+  asChild
+>
+  <Link 
+    href="https://www.pay.moneyfusion.net/les-deux-_1748206822020/"
+    className="flex items-center justify-center"
+  >
+    JE SOUSCRIS
+    <motion.div
+      animate={{ x: [0, 5, 0] }}
+      transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY }}
+    >
+      <ArrowRight className="h-5 w-5 ml-2" />
+    </motion.div>
+  </Link>
+</MorphingButton>
             </motion.div>
           </motion.div>
         </div>
@@ -1396,20 +1428,30 @@ export default function LandingPage() {
                 </motion.strong>{" "}
                 qui ont déjà changé leur vie grâce à mon programme.
               </motion.p>
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-10 py-6 text-xl font-bold"
-              >
-               SOUSCRIRE
-              </Button>
+             <MorphingButton 
+  className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-12 py-6 text-xl font-bold cursor-pointer"
+  asChild
+>
+  <Link 
+    href="https://www.pay.moneyfusion.net/les-deux-_1748206822020/"
+    className="flex items-center justify-center"
+  >
+    JE SOUSCRIS
+    <motion.div
+      animate={{ x: [0, 5, 0] }}
+      transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY }}
+    >
+      <ArrowRight className="h-5 w-5 ml-2" />
+    </motion.div>
+  </Link>
+</MorphingButton>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Pricing Section avec effets 3D avancés */}
-      <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-gradient-to-b from-blue-800 to-blue-900 relative overflow-hidden">
-        {/* Particules de fond premium */}
+{/* Pricing Section avec effets 3D avancés */}
+<section id="pricing" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-gradient-to-b from-blue-800 to-blue-900 relative overflow-hidden">        {/* Particules de fond premium */}
         <div className="absolute inset-0">
           {[...Array(40)].map((_, i) => (
             <motion.div
@@ -1565,9 +1607,14 @@ export default function LandingPage() {
                           </motion.li>
                         ))}
                       </ul>
-                      <MorphingButton className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white py-4 text-lg font-semibold">
-                        Commencer maintenant
-                      </MorphingButton>
+                     <MorphingButton 
+  className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white py-4 text-lg font-semibold"
+  asChild
+>
+  <Link href="https://www.pay.moneyfusion.net/la-formation-sur-les-produits-digitaux-_1748206593770/">
+    Commencer maintenant
+  </Link>
+</MorphingButton>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -1655,9 +1702,14 @@ export default function LandingPage() {
                           </motion.li>
                         ))}
                       </ul>
-                      <MorphingButton className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white py-4 text-lg font-semibold">
-                        Réserver mon coaching
-                      </MorphingButton>
+                      <MorphingButton 
+  className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white py-4 text-lg font-semibold"
+  asChild
+>
+  <Link href="https://www.pay.moneyfusion.net/coaching-sur-les-produits-digitaux-_1748206693121/">
+    Réserver mon coaching
+  </Link>
+</MorphingButton>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -1784,15 +1836,20 @@ export default function LandingPage() {
                         ))}
                       </ul>
 
-                      <MorphingButton className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-blue-900 text-xl py-6 font-bold group mb-4">
-                        LIBERTÉ TOTALE
-                        <motion.div
-                          animate={{ x: [0, 5, 0] }}
-                          transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY }}
-                        >
-                          <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6" />
-                        </motion.div>
-                      </MorphingButton>
+                     <MorphingButton 
+  className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-blue-900 text-xl py-6 font-bold group mb-4"
+  asChild
+>
+  <Link href="https://www.pay.moneyfusion.net/les-deux-_1748206822020/">
+    LIBERTÉ TOTALE
+    <motion.div
+      animate={{ x: [0, 5, 0] }}
+      transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY }}
+    >
+      <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6" />
+    </motion.div>
+  </Link>
+</MorphingButton>
 
                       <motion.div
                         className="text-center"
@@ -2276,23 +2333,27 @@ export default function LandingPage() {
                   transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
                 />
 
-                <Button
-                  size="lg"
-                  className="relative bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-4 sm:px-8 lg:px-12 py-4 sm:py-6 lg:py-8 font-bold group shadow-2xl w-full max-w-3xl mx-auto"
-                >
-                  <span className="flex items-center justify-center">
-                    <span className="text-center leading-tight text-sm sm:text-base lg:text-xl">
-                      MA LIBERTÉ FINANCIÈRE MAINTENANT
-                    </span>
-                    <motion.div
-                      animate={{ x: [0, 10, 0] }}
-                      transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
-                      className="ml-2 sm:ml-4 flex-shrink-0"
-                    >
-                      <Rocket className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6" />
-                    </motion.div>
-                  </span>
-                </Button>
+               <Button
+  size="lg"
+  className="relative bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-4 sm:px-8 lg:px-12 py-4 sm:py-6 lg:py-8 font-bold group shadow-2xl w-full max-w-3xl mx-auto"
+  asChild
+>
+  <Link 
+    href="https://www.pay.moneyfusion.net/les-deux-_1748206822020/"
+    className="flex items-center justify-center"
+  >
+    <span className="text-center leading-tight text-sm sm:text-base lg:text-xl">
+      MA LIBERTÉ FINANCIÈRE MAINTENANT
+    </span>
+    <motion.div
+      animate={{ x: [0, 10, 0] }}
+      transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
+      className="ml-2 sm:ml-4 flex-shrink-0"
+    >
+      <Rocket className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6" />
+    </motion.div>
+  </Link>
+</Button>
               </motion.div>
             </motion.div>
 
