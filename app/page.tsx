@@ -1272,7 +1272,7 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
               >
-                <AnimatedCounter end={15000} suffix=" F CFA" />
+                <AnimatedCounter end={10000} suffix=" F CFA" />
               </motion.div>
               <motion.p
                 className="text-xl text-white mb-6"
@@ -1569,7 +1569,7 @@ export default function LandingPage() {
                           whileInView={{ opacity: 1, scale: 1 }}
                           transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
                         >
-                          <AnimatedCounter end={10000} suffix=" F" />
+                          <AnimatedCounter end={7000} suffix=" F" />
                         </motion.div>
                         <motion.div
                           className="text-green-400 font-semibold"
@@ -1664,7 +1664,7 @@ export default function LandingPage() {
                           whileInView={{ opacity: 1, scale: 1 }}
                           transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
                         >
-                          <AnimatedCounter end={10000} suffix=" F" />
+                          <AnimatedCounter end={7000} suffix=" F" />
                         </motion.div>
                         <motion.div
                           className="text-green-400 font-semibold"
@@ -1777,12 +1777,13 @@ export default function LandingPage() {
                           50 000 F CFA
                         </motion.div>
                         <motion.div
+                        
                           className="text-5xl font-bold text-yellow-400"
                           initial={{ opacity: 0, scale: 0 }}
                           whileInView={{ opacity: 1, scale: 1 }}
                           transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
                         >
-                          <AnimatedCounter end={15000} suffix=" F" />
+                          <AnimatedCounter end={10000} suffix=" F" />
                         </motion.div>
                         <motion.div
                           className="text-green-400 font-bold text-xl"
@@ -2297,7 +2298,7 @@ export default function LandingPage() {
                     animate={{ scale: [1, 1.1, 1] }}
                     transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
                   >
-                    <AnimatedCounter end={15000} suffix=" F CFA" />
+                    <AnimatedCounter end={10000} suffix=" F CFA" />
                   </motion.span>
                 </motion.div>
 
