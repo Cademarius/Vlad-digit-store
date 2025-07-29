@@ -726,7 +726,7 @@ export default function LandingPage() {
   className="border-2 border-yellow-400 text-yellow-400 bg-yellow-400 text-blue-900 px-6 sm:px-10 py-4 sm:py-6 text-base sm:text-lg font-semibold w-full sm:w-auto"
   asChild
 >
-  <Link href="https://www.pay.moneyfusion.net/la-formation-sur-les-produits-digitaux-_1748206593770/">
+  <Link href="https://chat.whatsapp.com/EHWSt3jMKg36Z1Ln2ZOIcu?mode=ac_t">
     DÉCOUVRIR LE PROGRAMME
   </Link>
 </Button>
@@ -1264,33 +1264,26 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.3 }}
               >
-                Pour seulement
+                Rejoignez le programme  
               </motion.div>
-              <motion.div
-                className="text-5xl font-bold text-green-400 mb-4"
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
-              >
-                <AnimatedCounter end={10000} suffix=" F CFA" />
-              </motion.div>
+              
               <motion.p
-                className="text-xl text-white mb-6"
+                className="text-5xl font-bold text-green-400 mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7 }}
               >
-                <strong>Valable uniquement</strong> pour les 20 premiers inscrits !
+              <strong>Ma Liberté Financière</strong>
               </motion.p>
               <MorphingButton 
   className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-12 py-6 text-xl font-bold cursor-pointer"
   asChild
 >
   <Link 
-    href="https://www.pay.moneyfusion.net/les-deux-_1748206822020/"
+    href="https://chat.whatsapp.com/EHWSt3jMKg36Z1Ln2ZOIcu?mode=ac_t"
     className="flex items-center justify-center"
   >
-    JE SOUSCRIS
+    JE REJOINS
     <motion.div
       animate={{ x: [0, 5, 0] }}
       transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY }}
@@ -1433,7 +1426,7 @@ export default function LandingPage() {
   asChild
 >
   <Link 
-    href="https://www.pay.moneyfusion.net/les-deux-_1748206822020/"
+    href="https://chat.whatsapp.com/EHWSt3jMKg36Z1Ln2ZOIcu?mode=ac_t"
     className="flex items-center justify-center"
   >
     JE SOUSCRIS
@@ -1450,459 +1443,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-{/* Pricing Section avec effets 3D avancés */}
-<section id="pricing" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-gradient-to-b from-blue-800 to-blue-900 relative overflow-hidden">        {/* Particules de fond premium */}
-        <div className="absolute inset-0">
-          {[...Array(40)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute"
-              animate={{
-                x: [0, Math.random() * 200 - 100],
-                y: [0, Math.random() * 200 - 100],
-                scale: [0, 1, 0],
-                rotate: [0, 360],
-              }}
-              transition={{
-                duration: Math.random() * 8 + 5,
-                repeat: Number.POSITIVE_INFINITY,
-                delay: Math.random() * 5,
-              }}
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-            >
-              <div className="w-1 h-1 bg-yellow-400 rounded-full opacity-30" />
-            </motion.div>
-          ))}
-        </div>
-
-        <div className="container mx-auto max-w-7xl relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <motion.div
-              initial={{ scale: 0, rotate: -180 }}
-              whileInView={{ scale: 1, rotate: 0 }}
-              transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-              viewport={{ once: true }}
-            >
-              <Badge className="bg-purple-500/20 text-purple-300 border-purple-500/30 mb-6 text-lg px-6 py-3">
-                <motion.div
-                  animate={{ rotate: 360, scale: [1, 1.2, 1] }}
-                  transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-                >
-                  <Crown className="h-5 w-5 mr-2" />
-                </motion.div>
-                Offre Spéciale Limitée
-              </Badge>
-            </motion.div>
-
-            <motion.h2
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8"
-              initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <RevealText delay={0.3}>Choisissez votre chemin vers la liberté</RevealText>
-            </motion.h2>
-
-            <motion.p
-              className="text-xl text-blue-200 max-w-4xl mx-auto leading-relaxed"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <strong className="text-white">Attention :</strong> Cette offre exceptionnelle est limitée aux 20 premiers
-              inscrits. Après, les prix reviendront à leur valeur normale.
-            </motion.p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
-            {/* Formation */}
-            <motion.div
-              initial={{ opacity: 0, y: 100, rotateY: -30 }}
-              whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="group"
-            >
-              <MagneticCard className="h-full">
-                <motion.div
-                  whileHover={{
-                    y: -15,
-                    scale: 1.03,
-                    rotateY: 5,
-                    transition: { duration: 0.3 },
-                  }}
-                >
-                  <Card className="bg-white/10 backdrop-blur-lg border-white/20 hover:border-blue-400/50 transition-all duration-500 h-full relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <CardHeader className="text-center relative z-10 pb-8">
-                      <motion.div
-                        className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6"
-                        whileHover={{ scale: 1.2, rotate: 360 }}
-                        transition={{ duration: 0.5 }}
-                      >
-                        <Award className="h-8 w-8 text-white" />
-                      </motion.div>
-                      <CardTitle className="text-2xl text-white mb-4">Formation Seule</CardTitle>
-                      <div className="space-y-2">
-                        <motion.div
-                          className="text-lg text-gray-400 line-through"
-                          initial={{ opacity: 0, scale: 0 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: 0.3 }}
-                        >
-                          25 000 F CFA
-                        </motion.div>
-                        <motion.div
-                          className="text-3xl sm:text-4xl font-bold text-blue-400"
-                          initial={{ opacity: 0, scale: 0 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
-                        >
-                          <AnimatedCounter end={7000} suffix=" F" />
-                        </motion.div>
-                        <motion.div
-                          className="text-green-400 font-semibold"
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.7 }}
-                        >
-                          Économisez 15 000 F
-                        </motion.div>
-                      </div>
-                      <CardDescription className="text-blue-200 mt-4">
-                        Parfait pour commencer votre transformation
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent className="relative z-10">
-                      <ul className="space-y-4 mb-8">
-                        {[
-                          "250+ produits digitaux prêts",
-                          "115 tunnels de vente optimisés",
-                          "Formation complète étape par étape",
-                          "Accès à vie aux mises à jour",
-                          "Support par email",
-                        ].map((feature, index) => (
-                          <motion.li
-                            key={index}
-                            className="flex items-center text-sm sm:text-base text-blue-200"
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 0.3 + index * 0.1 }}
-                          >
-                            <motion.div whileHover={{ scale: 1.2, rotate: 360 }} transition={{ duration: 0.3 }}>
-                              <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                            </motion.div>
-                            {feature}
-                          </motion.li>
-                        ))}
-                      </ul>
-                     <MorphingButton 
-  className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white py-4 text-lg font-semibold"
-  asChild
->
-  <Link href="https://www.pay.moneyfusion.net/la-formation-sur-les-produits-digitaux-_1748206593770/">
-    Commencer maintenant
-  </Link>
-</MorphingButton>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              </MagneticCard>
-            </motion.div>
-
-            {/* Coaching */}
-            <motion.div
-              initial={{ opacity: 0, y: 100, rotateY: -30 }}
-              whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="group"
-            >
-              <MagneticCard className="h-full">
-                <motion.div
-                  whileHover={{
-                    y: -15,
-                    scale: 1.03,
-                    rotateY: 5,
-                    transition: { duration: 0.3 },
-                  }}
-                >
-                  <Card className="bg-white/10 backdrop-blur-lg border-white/20 hover:border-orange-400/50 transition-all duration-500 h-full relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <CardHeader className="text-center relative z-10 pb-8">
-                      <motion.div
-                        className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6"
-                        whileHover={{ scale: 1.2, rotate: 360 }}
-                        transition={{ duration: 0.5 }}
-                      >
-                        <Users className="h-8 w-8 text-white" />
-                      </motion.div>
-                      <CardTitle className="text-2xl text-white mb-4">Coaching Seul</CardTitle>
-                      <div className="space-y-2">
-                        <motion.div
-                          className="text-lg text-gray-400 line-through"
-                          initial={{ opacity: 0, scale: 0 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: 0.3 }}
-                        >
-                          25 000 F CFA
-                        </motion.div>
-                        <motion.div
-                          className="text-3xl sm:text-4xl font-bold text-orange-400"
-                          initial={{ opacity: 0, scale: 0 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
-                        >
-                          <AnimatedCounter end={7000} suffix=" F" />
-                        </motion.div>
-                        <motion.div
-                          className="text-green-400 font-semibold"
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.7 }}
-                        >
-                          Économisez 15 000 F
-                        </motion.div>
-                      </div>
-                      <CardDescription className="text-blue-200 mt-4">
-                        Accompagnement personnalisé avec Adriel
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent className="relative z-10">
-                      <ul className="space-y-4 mb-8">
-                        {[
-                          "Séances de coaching 1:1 avec Adriel",
-                          "Plan d'action personnalisé",
-                          "Suivi hebdomadaire de vos progrès",
-                          "Support prioritaire 24/7",
-                          "Garantie de résultats ou remboursé",
-                        ].map((feature, index) => (
-                          <motion.li
-                            key={index}
-                            className="flex items-center text-sm sm:text-base text-blue-200"
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 0.3 + index * 0.1 }}
-                          >
-                            <motion.div whileHover={{ scale: 1.2, rotate: 360 }} transition={{ duration: 0.3 }}>
-                              <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                            </motion.div>
-                            {feature}
-                          </motion.li>
-                        ))}
-                      </ul>
-                      <MorphingButton 
-  className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white py-4 text-lg font-semibold"
-  asChild
->
-  <Link href="https://www.pay.moneyfusion.net/coaching-sur-les-produits-digitaux-_1748206693121/">
-    Réserver mon coaching
-  </Link>
-</MorphingButton>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              </MagneticCard>
-            </motion.div>
-
-            {/* Pack Complet */}
-            <motion.div
-              initial={{ opacity: 0, y: 100, rotateY: -30 }}
-              whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="group relative"
-            >
-              <motion.div
-                className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-3xl blur opacity-75 group-hover:opacity-100"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-              />
-              <MagneticCard className="h-full">
-                <motion.div
-                  whileHover={{
-                    y: -15,
-                    scale: 1.05,
-                    rotateY: 5,
-                    transition: { duration: 0.3 },
-                  }}
-                >
-                  <Card className="relative bg-blue-900/90 backdrop-blur-lg border-yellow-400/50 h-full overflow-hidden">
-                    <motion.div
-                      className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-                      initial={{ scale: 0, rotate: -180 }}
-                      whileInView={{ scale: 1, rotate: 0 }}
-                      transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
-                    >
-                      <Badge className="bg-gradient-to-r from-yellow-400 to-orange-500 text-blue-900 px-8 py-3 text-lg font-bold">
-                        <motion.div
-                          animate={{ rotate: 360 }}
-                          transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-                        >
-                          <Crown className="h-5 w-5 mr-2" />
-                        </motion.div>
-                        CHOIX N°1 - MEILLEURE VALEUR
-                      </Badge>
-                    </motion.div>
-
-                    <CardHeader className="text-center pt-16 pb-8">
-                      <motion.div
-                        className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6"
-                        whileHover={{ scale: 1.2, rotate: 360 }}
-                        transition={{ duration: 0.5 }}
-                        animate={{ y: [0, -5, 0] }}
-                        style={{ animationDuration: "3s", animationIterationCount: "infinite" }}
-                      >
-                        <Sparkles className="h-10 w-10 text-blue-900" />
-                      </motion.div>
-                      <CardTitle className="text-3xl text-white mb-4">Pack Liberté Totale</CardTitle>
-                      <div className="space-y-2">
-                        <motion.div
-                          className="text-xl text-gray-400 line-through"
-                          initial={{ opacity: 0, scale: 0 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: 0.3 }}
-                        >
-                          50 000 F CFA
-                        </motion.div>
-                        <motion.div
-                        
-                          className="text-5xl font-bold text-yellow-400"
-                          initial={{ opacity: 0, scale: 0 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
-                        >
-                          <AnimatedCounter end={10000} suffix=" F" />
-                        </motion.div>
-                        <motion.div
-                          className="text-green-400 font-bold text-xl"
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.7 }}
-                          whileHover={{ scale: 1.1 }}
-                        >
-                          Économisez 35 000 F !
-                        </motion.div>
-                      </div>
-                      <CardDescription className="text-blue-200 mt-4 text-lg">
-                        Formation + Coaching = Succès Garanti
-                      </CardDescription>
-                    </CardHeader>
-
-                    <CardContent className="pb-8">
-                      <motion.div
-                        className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl p-4 mb-6 border border-green-500/30"
-                        whileHover={{ scale: 1.02, borderColor: "rgba(34, 197, 94, 0.5)" }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <p className="text-center text-white font-semibold">
-                          🎁 <strong>BONUS EXCLUSIF :</strong> Accès VIP à la communauté privée d'Adriel (Valeur : 10
-                          000 F)
-                        </p>
-                      </motion.div>
-
-                      <ul className="space-y-4 mb-8">
-                        {[
-                          "TOUT de la formation complète",
-                          "Coaching personnalisé avec Adriel",
-                          "Accès VIP à la communauté privée",
-                          "Support prioritaire 24/7",
-                          "Garantie de résultats ou remboursé",
-                          "Mises à jour à vie gratuites",
-                          "Bonus exclusifs réservés aux VIP",
-                        ].map((feature, index) => (
-                          <motion.li
-                            key={index}
-                            className="flex items-center text-white"
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 0.3 + index * 0.1 }}
-                          >
-                            <motion.div whileHover={{ scale: 1.3, rotate: 360 }} transition={{ duration: 0.3 }}>
-                              <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                            </motion.div>
-                            {feature}
-                          </motion.li>
-                        ))}
-                      </ul>
-
-                     <MorphingButton 
-  className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-blue-900 text-xl py-6 font-bold group mb-4"
-  asChild
->
-  <Link href="https://www.pay.moneyfusion.net/les-deux-_1748206822020/">
-    LIBERTÉ TOTALE
-    <motion.div
-      animate={{ x: [0, 5, 0] }}
-      transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY }}
-    >
-      <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6" />
-    </motion.div>
-  </Link>
-</MorphingButton>
-
-                      <motion.div
-                        className="text-center"
-                        animate={{ scale: [1, 1.05, 1] }}
-                        transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-                      >
-                        <div className="text-sm text-yellow-300 font-semibold">
-                          ⚡ Plus que <AnimatedCounter end={20} /> places disponibles à ce prix !
-                        </div>
-                      </motion.div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              </MagneticCard>
-            </motion.div>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50, scale: 0.8 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.6, type: "spring", stiffness: 100 }}
-            viewport={{ once: true }}
-            className="text-center mt-16"
-          >
-            <motion.div
-              className="bg-red-500/20 border border-red-500/30 rounded-2xl p-6"
-              whileHover={{
-                scale: 1.02,
-                borderColor: "rgba(239, 68, 68, 0.5)",
-                boxShadow: "0 25px 50px -12px rgba(239, 68, 68, 0.3)",
-              }}
-              transition={{ duration: 0.3 }}
-            >
-              <motion.p
-                className="text-xl text-white font-bold"
-                animate={{ scale: [1, 1.02, 1] }}
-                transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
-              >
-                ⏰ <strong className="text-red-400">ATTENTION :</strong> Cette offre expire dans{" "}
-                <motion.span
-                  className="text-yellow-400 text-xl"
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY }}
-                >
-                  <AnimatedCounter end={20} /> places
-                </motion.span>{" "}
-                à ce prix exceptionnel !
-              </motion.p>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* FAQ Section avec animations fluides */}
       <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-gradient-to-b from-blue-900 to-blue-800">
@@ -2340,7 +1880,7 @@ export default function LandingPage() {
   asChild
 >
   <Link 
-    href="https://www.pay.moneyfusion.net/les-deux-_1748206822020/"
+    href="https://chat.whatsapp.com/EHWSt3jMKg36Z1Ln2ZOIcu?mode=ac_t"
     className="flex items-center justify-center"
   >
     <span className="text-center leading-tight text-sm sm:text-base lg:text-xl">
